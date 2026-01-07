@@ -34,28 +34,28 @@ Sơ đồ tổng quan kiến trúc hệ thống, thể hiện luồng dữ liệ
 ```mermaid
 graph TD
     %% Define Nodes
-    Merchant[Merchant (Shopify Admin)]
-    Customer[Customer (Storefront)]
-    Shopify[Shopify Platform]
+    Merchant["Merchant (Shopify Admin)"]
+    Customer["Customer (Storefront)"]
+    Shopify["Shopify Platform"]
     
     subgraph "Infrastructure (Docker/Cloud)"
-        LB[Load Balancer / Nginx]
+        LB["Load Balancer / Nginx"]
         
         subgraph "Application Layer"
-            NestJS[NestJS Server<br/>(API & Workers)]
-            ThemeBuilder[Theme Builder App]
+            NestJS["NestJS Server<br/>(API & Workers)"]
+            ThemeBuilder["Theme Builder App"]
         end
         
         subgraph "Data & Messaging Layer"
-            MongoDB[(MongoDB<br/>Primary Data)]
-            Redis[(Redis<br/>Cache & Bull Queue)]
-            RabbitMQ[RabbitMQ<br/>Message Broker]
+            MongoDB[("MongoDB<br/>Primary Data")]
+            Redis[("Redis<br/>Cache & Bull Queue")]
+            RabbitMQ["RabbitMQ<br/>Message Broker"]
         end
     end
     
     subgraph "External Services"
-        AWS_S3[AWS S3<br/>Storage]
-        AWS_SES[AWS SES<br/>Email]
+        AWS_S3["AWS S3<br/>Storage"]
+        AWS_SES["AWS SES<br/>Email"]
     end
 
     %% Connections
