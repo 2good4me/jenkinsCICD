@@ -77,9 +77,15 @@ graph TD
     NestJS -->|GraphQL/REST API| Shopify
     
     %% Styles
-    style NestJS fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    style MongoDB fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style Shopify fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style NestJS fill:#3498db,stroke:#2980b9,stroke-width:2px,color:#fff
+    style MongoDB fill:#2ecc71,stroke:#27ae60,stroke-width:2px,color:#fff
+    style Shopify fill:#9b59b6,stroke:#8e44ad,stroke-width:2px,color:#fff
+    style Redis fill:#e74c3c,stroke:#c0392b,stroke-width:2px,color:#fff
+    style RabbitMQ fill:#f39c12,stroke:#d35400,stroke-width:2px,color:#fff
+    style AWS_S3 fill:#7f8c8d,stroke:#34495e,stroke-width:2px,color:#fff
+    style AWS_SES fill:#7f8c8d,stroke:#34495e,stroke-width:2px,color:#fff
+    style Merchant fill:#34495e,stroke:#2c3e50,stroke-width:2px,color:#fff
+    style Customer fill:#34495e,stroke:#2c3e50,stroke-width:2px,color:#fff
 ```
 
 ---
