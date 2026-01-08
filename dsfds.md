@@ -1,7 +1,7 @@
-# SYSTEM ARCHITECTURE DOCUMENT - VIFY GIFT CARD V2
+# SYSTEM ARCHITECTURE DOCUMENT - VIFY GIFT CARD 
 
 ## 1. OVERVIEW (Tổng quan)
-**VIFY Gift Card v2** là một ứng dụng trong hệ sinh thái Shopify, cung cấp giải pháp toàn diện cho việc phát hành, quản lý và tùy chỉnh thẻ quà tặng (Gift Card). Hệ thống được thiết kế theo kiến trúc **Monolithic Modular** (mô-đun hóa) trên nền tảng NestJS, sử dụng MongoDB làm cơ sở dữ liệu chính và kết hợp Redis/RabbitMQ cho các tác vụ xử lý nền (background jobs) và hàng đợi (queue).
+**VIFY Gift Card** là một ứng dụng trong hệ sinh thái Shopify, cung cấp giải pháp toàn diện cho việc phát hành, quản lý và tùy chỉnh thẻ quà tặng (Gift Card). Hệ thống được thiết kế theo kiến trúc **Monolithic Modular** (mô-đun hóa) trên nền tảng NestJS, sử dụng MongoDB làm cơ sở dữ liệu chính và kết hợp Redis/RabbitMQ cho các tác vụ xử lý nền (background jobs) và hàng đợi (queue).
 
 Dự án bao gồm 3 thành phần chính:
 1.  **Core Backend & API (`web`)**: Xử lý logic nghiệp vụ, API, webhook và background jobs.
@@ -238,6 +238,3 @@ Hệ thống sử dụng Docker Compose để dựng các dịch vụ phụ tr�
 ### Cơ chế lưu trữ & State
 *   **MongoDB Data**: Mount volume tại `.docker/data/db` (hoặc tương tự) để giữ dữ liệu khi restart container.
 *   **Logs**: Thư mục `web/logs` được sử dụng để lưu file log (Winston logger), cần mount ra ngoài host nếu chạy production docker.
-
----
-*Tài liệu được trích xuất tự động dựa trên phân tích source code ngày 07/01/2026.*
